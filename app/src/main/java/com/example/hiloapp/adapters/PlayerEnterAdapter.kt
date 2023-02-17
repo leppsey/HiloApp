@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hiloapp.PlayerItem
 import com.example.hiloapp.R
-import com.example.hiloapp.databinding.ListNameOutBinding
+import com.example.hiloapp.databinding.ListNameEnterBinding
 
-class PlayerAdapter: ListAdapter<PlayerItem,PlayerAdapter.Holder>(Comparator()) {
+
+class PlayerEnterAdapter: ListAdapter<PlayerItem,PlayerEnterAdapter.Holder>(Comparator()) {
     class Holder(view: View): RecyclerView.ViewHolder(view){
-        private val binding=ListNameOutBinding.bind(view)
-        fun bind(item:PlayerItem)= with(binding){
+        private val binding=ListNameEnterBinding.bind(view)
+        fun bind(item:PlayerItem) {
             binding.PlayerNameView.text=item.name
-            binding.PlayerPointsView.text=item.points.toString()
         }
 
     }
@@ -31,7 +31,7 @@ class PlayerAdapter: ListAdapter<PlayerItem,PlayerAdapter.Holder>(Comparator()) 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view= LayoutInflater.from(parent.context).inflate(R.layout.list_name_out,parent,false)
+        val view= LayoutInflater.from(parent.context).inflate(R.layout.list_name_enter,parent,false)
         return Holder(view)
     }
 

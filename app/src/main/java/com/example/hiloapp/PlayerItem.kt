@@ -1,6 +1,7 @@
 package com.example.hiloapp
 
 data class PlayerItem(
-    val name: String,
-    var points: Int
+    var name: String,
+    var points: Int,
+    var id:Int
 )
